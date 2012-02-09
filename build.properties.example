@@ -1,0 +1,34 @@
+compile.build.debug = yes
+compile.build.optimize = no
+compile.build.deprecation = yes
+
+# Uncomment to generate warnings for deprecated files.
+#compile.warn.deprecation = yes
+
+ant.build.javac.source=1.6
+ant.build.javac.target=1.6
+
+# Whether the Unit Test should be run in their own JVM.
+junit.fork=true
+
+# Controls how the JVM is forked. Valid options are 'perTest', 'perBatch', and 'once'
+junit.forkmode=once
+
+
+# ========================================================================================
+# Application directory structure. These properties define the where the build manager 
+# will find source files and put generated data. In general, the default options are 
+# are adequate, but these can be configured if needed.
+#
+# TODO add some better documentation here
+# ========================================================================================
+
+basedir         = .
+src.dir         = ${basedir}/src
+build.dir       = ${basedir}/build
+classfile.dir   = ${build.dir}/classes
+lib.dir         = ${basedir}/lib
+javadoc.dir     = ${basedir}/doc
+dist.dir        = ${basedir}/dist
+meta.dir        = ${web.dir}/META-INF
+buildtools.dir  = ../build-tools

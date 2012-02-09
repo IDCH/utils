@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ========================================================================= ==>
+<!== ivy.xml
+<!==  
+<!== Created by Neal Audenaert <neal@idch.org>
+<!== ========================================================================= -->
+<ivy-module version="1.0">
+  <info organisation="org.idch" module="idch-utils">
+      <description>
+          Utility classes common across IDCH projects.
+      </description>
+  </info>
+
+  
+  <!-- Define dependency configurations for different tasks and distribution
+       methods (e.g. testing, creating a .jar or .war distributables. 
+   -->
+  <configurations defaultconfmapping="default">
+    <conf name="compile" visibility="private"/>
+    <conf name="test" extends="compile" visibility="private"/>
+    <conf name="master" />
+    <conf name="runtime" extends="compile"/>
+    <conf name="default" extends="master, runtime"/>
+  </configurations>
+  
+  <publications>
+    <artifact conf="master"/>
+  </publications>
+  
+  <dependencies>
+   
+      <dependency org="org.apache" name="log4j" rev="1.2.14" conf="compile->default;runtime->default"/>                
+      <dependency org="org.apache.commons" name="commons-lang" rev="2.1" conf="compile->default;runtime->default"/>
+    <dependency org="junit" name="junit" rev="4.5" conf="test->default;"/>  
+
+    <dependency org="com.googlecode.json-simple" name="json-simple" rev="1.1" conf="compile->default;runtime->default"/>
+  </dependencies>
+</ivy-module>

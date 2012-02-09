@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<project name="utils" default="package" basedir=".">
+
+  <property name="build.properties" value="./build.properties"/>
+  <property file="${build.properties}"/>
+
+  <!-- Import the basic default project -->
+  <import file="${buildtools.dir}/basic.xml"/>
+
+</project>

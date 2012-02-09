@@ -334,7 +334,7 @@ public class Cache<K, V> implements Collection<V>, Serializable {
 
     /** Returns the cache as an array */
     @SuppressWarnings("unchecked")
-    public Object[] toArray(Object[] arr) { return toList().toArray(arr); }
+    public <T> T[] toArray(T[] arr) { return toList().toArray(arr); }
 
     /** Returns the cache as an array. */
     private ArrayList<V> toList() {

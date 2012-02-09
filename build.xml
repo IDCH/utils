@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 
-<project name="utils" default="package" basedir=".">
+<project name="idch-utils" default="package" basedir=".">
 
   <property name="build.properties" value="./build.properties"/>
   <property file="${build.properties}"/>
